@@ -1,0 +1,118 @@
+// HTML
+
+<section class="EXPERIENCE">
+    <div class="timeline">
+        <div class="contain left-contain">
+            <img src="a.logo">
+            <div class="text-box">
+                <h2>APEX-BYTE</h2>
+                <small>2023-2024</small>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quasi iusto quae, facere rem mollitia consectetur excepturi eveniet assumenda accusantium.</p>
+            <span class="left-contain-arrow"></span>
+            </div>
+        </div>
+        <div class="contain right-contain">
+            <img src="zidio.jpg">
+            <div class="text-box">
+                <h2>Zidio Development</h2>
+                <small>2024-2025</small>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quasi iusto quae, facere rem mollitia consectetur excepturi eveniet assumenda accusantium.</p>
+                <span class="right-contain-arrow"></span>
+            </div>
+        </div>
+        <div class="contain  left-contain">
+            <img src="E-Cell.webp">
+            <div class="text-box">
+                <h2>E-Cell || IIT Bombay</h2>
+                <small>2024-2025</small>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quasi iusto quae, facere rem mollitia consectetur excepturi eveniet assumenda accusantium.</p>
+                <span class="left-contain-arrow"></span>
+            </div>
+        </div>
+       </div>
+    
+    
+</section>
+// CSS
+.experience{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+.timeline{
+    position: relative;
+    max-width:1200px;
+    margin:100px auto; 
+}
+.contain{
+    padding:10px 50px;
+    position:relative;
+    width:50%;
+    animation:movedown 1s linear forwards;
+    opacity:0;
+}
+.text-box{
+    padding:20px 30px;
+    background:rgba(0, 255, 255, 0.735);
+    position:relative;
+    border-radius:6px;
+    font-size:15px;
+}
+.left-contain{
+    left:0;
+}
+.right-contain{
+    left:50%;
+}
+.contain img{
+    position:absolute;
+    width:40px;
+    border-radius:50%;
+    right:-20px;
+    top:32px;
+    z-index:10;
+}
+.right-contain img{
+    left:-20px;
+}
+.timeline::after{
+    content:'';
+    position:absolute;
+    width:6px;
+    height:100%;
+    background: rgba(0, 255, 255, 0.735);
+    top:0;
+    left:50%;
+    margin-left:-3px;
+    z-index:-1;
+    animation:moveline 3s linear forwards;
+}
+.text-box h2{
+    font-weight:600;
+}
+.text-box small{
+    display:inline-block;
+    margin-bottom:15px;
+}
+.left-contain-arrow{
+    height:0;
+    width:0;
+    position: absolute;
+    top:28px;
+    z-index: 1;
+    border-top:15px solid transparent;
+    border-bottom:15px solid transparent;
+    border-left:15px solid rgba(0, 255, 255, 0.735);
+    right:-15px;
+}
+.right-contain-arrow{
+    height:0;
+    width:0;
+    position: absolute;
+    top:28px;
+    z-index: 1;
+    border-top:15px solid transparent;
+    border-bottom:15px solid transparent;
+    border-left:15px solid rgba(0, 255, 255, 0.735);
+    left:-15px;
+}
